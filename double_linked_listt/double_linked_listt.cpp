@@ -47,8 +47,11 @@ void addNode()
         while (current != NULL && current->noMhs < newNode->noMhs) //step 1C : trever
         {
             previous = current;         //Step 1.d : move the previous to the current node
+            current = current->next;    //step 1. e: move the current ti the next mode
 
         }
+        newNode->next = current;        //step 4 make the  next field of the new code point
+        newNode->prev = previous;
     }
 
 }
