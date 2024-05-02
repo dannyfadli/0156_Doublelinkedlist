@@ -51,7 +51,21 @@ void addNode()
 
         }
         newNode->next = current;        //step 4 make the  next field of the new code point
-        newNode->prev = previous;
+        newNode->prev = previous;       //step 5: mske the previoud field of the new node ponit
+
+        if (current != NULL)
+        {
+            current->prev = newNode;    //Step 6: make  the next  field  of the current node
+        }
+        if (previous != NULL)
+        {
+            previous->next = newNode;   //step 7:make the next field of the previous node
+        }
+        else
+        {
+            //If previous is still NULL, it means newNOde is now the first node
+            START = newNode;
+        }
     }
 
 }
