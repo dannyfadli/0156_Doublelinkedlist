@@ -19,6 +19,18 @@ void addNode()
     cin >> newNode->noMhs;          //Assign Value to the data field of the new node
     cout << "\nEnter the name of the student: ";
     cin >> newNode->name;           //Assign value to the data field of the new node
+
+    //Insert the new node in the list
+    if (START == NULL || newNode->noMhs <= START->noMhs)    //Step 2: insert  the new node
+
+    {
+        if (START != NULL && newNode->noMhs == START->noMhs)
+        {
+            cout << "\033[31mDuplicate roll number not allowed\033[0m" << endl;
+            return;
+        }
+    }   //if The list is empty, make the new node the start
+
 }
 
 
