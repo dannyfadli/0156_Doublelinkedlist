@@ -44,8 +44,9 @@ void addNode()
         Node* current = START;          //step 1.a:Start from the first node
         Node* previous = NULL;          //step 1.b:previous node is NULL initialy
 
-        while (current != NULL && current->noMhs < newNode->noMhs)      //step 1C : tarver
+        while (current != NULL && current->noMhs < newNode->noMhs) //step 1C : trever
         {
+            previous = current;         //Step 1.d : move the previous to the current node
 
         }
     }
