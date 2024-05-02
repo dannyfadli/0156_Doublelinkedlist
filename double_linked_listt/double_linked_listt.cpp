@@ -2,9 +2,12 @@
 #include <string>
 using namespace std;
 
-struct node
+struct Node
 {
-    
+    int noMhs;
+    string name;
+    Node* next;
+    Node* prev;
 };
 
 
