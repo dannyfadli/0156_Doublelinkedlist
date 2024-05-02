@@ -113,9 +113,29 @@ void deleteNode()
     // Node to be deleted is that first node
     if (current == START)
     {
-        START = START->next;    //step dua update start pinter
+        START = START->next;    //step dua update start pointer
+        if (START != NULL)
+        {
+            START->prev = NULL;
+        }
     }
+    else
+    {
+        //node to be deleted is not the first node
+        previous->next = current->next;
+        if (current->next != NULL)
+        {
+            //if there's a successo, update its prev pointer
+            current->next->prev = previous;
+
+        }
+    }
+    //Release the memory of the node marked as current
+    delete current;
+    cout << "\x1b[32mRecord with roll number " << rollNo << " deleted\x1b[0m" << endl;
 }
+
+
 
 
 
