@@ -113,7 +113,7 @@ void deleteNode()
     // Node to be deleted is that first node
     if (current == START)
     {
-
+        START = START->next;    //step dua update start pinter
     }
 }
 
